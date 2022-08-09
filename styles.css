@@ -1,0 +1,60 @@
+.grid-container {
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.header {
+    height: 10vh;
+    background-color: black;
+    color: white;
+    grid-column: 1/-1;
+    width: 100%;
+}
+
+.aside {
+    background-color: orange;
+    color: white;
+    grid-column: 1/2;
+
+}
+
+.nav {
+    background-color: #fbb778;
+    color: white;
+    height: 10vh;
+    grid-column: 2/3;
+}
+
+.main {
+    background-color: gainsboro;
+    color: white;
+    grid-column: 2/3;
+    height: 70vh;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    height: 10vh;
+    grid-column: 1/-1;
+}
+
+@media screen and (max-width: 768px) {
+    .main, .nav {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .header, .footer {
+        width: 100%;
+    }
+
+    .aside {
+        width: 0%;
+    }
+}
